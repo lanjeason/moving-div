@@ -4,7 +4,7 @@
 <title>moving div</title>
 <meta http-equiv="content-type" content="text/html;charset=gb2312">
 <style type="text/css">
-#draggable{
+#draggable,#draggable2,#draggable3,#draggable4{
 	background-color:green;
 	font-size:9pt;
 	padding:30px;
@@ -26,7 +26,7 @@ var rDrag = {
                e.preventDefault && e.preventDefault();
                rDrag.o = o = this;
 		o.x = e.clientX - rDrag.o.offsetLeft;
-                o.y = e.clientY - rDrag.o.offsetTop;
+        o.y = e.clientY - rDrag.o.offsetTop;
 		document.onmousemove = rDrag.move;
 		document.onmouseup = rDrag.end;
 	},
@@ -53,12 +53,21 @@ var rDrag = {
     }
 }
 window.onload = function(){
-        var obj = document.getElementById('draggable');
-		rDrag.init(obj);
+    var obj = document.getElementById('draggable');
+    var obj2 = document.getElementById('draggable2');
+    var obj3 = document.getElementById('draggable3');
+    var obj4 = document.getElementById('draggable4');
+	rDrag.init(obj);
+	rDrag.init(obj2);
+	rDrag.init(obj3);
+	rDrag.init(obj4);
 }
 </script>
 </head>
 <body>
 	<div id="draggable">move me</a></div>
+	<div id="draggable2">move me</a></div>
+	<div id="draggable3">move me</a></div>
+	<div id="draggable4">move me</a></div>
 </body>
 </html>
