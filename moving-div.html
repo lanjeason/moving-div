@@ -23,8 +23,8 @@ var rDrag = {
 	start:function(e){
 		var o;
 		e = rDrag.fixEvent(e);
-               e.preventDefault && e.preventDefault();
-               rDrag.o = o = this;
+        e.preventDefault && e.preventDefault();
+        rDrag.o = o = this;
 		o.x = e.clientX - rDrag.o.offsetLeft;
         o.y = e.clientY - rDrag.o.offsetTop;
 		document.onmousemove = rDrag.move;
